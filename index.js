@@ -19,10 +19,24 @@ const questions = ([
         },
 
         {
+            type: "input",
+            name: "description",
+            message: "Provide your project description. (Required)",
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                  return true;
+                } else {
+                  console.log('Enter your project description');
+                  return false;
+                }
+              }
+        },
+
+        {
             type: "list",
             name: "license",
             message: "What license does your project use?",
-            choices: ["MIT", "Apache 2.0", "GPL v3.0", "None"],
+            choices: ["MIT", "Apache 2.0", "GPL v3.0", "BSD 3", "None"],
             validate: licenseInput => {
                 if (licenseInput) {
                   return true;
@@ -36,7 +50,7 @@ const questions = ([
         {
             type: "input",
             name: "installation",
-            message: "What steps are needed to install your project? (Required)",
+            message: "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. (Required)",
             validate: installationInput => {
                 if (installationInput) {
                   return true;
@@ -50,7 +64,7 @@ const questions = ([
         {
             type: "input",
             name: "usage",
-            message: "What is the use of your project?",
+            message: "Provide instructions and examples for use. Include screenshots as needed.",
             validate: usageInput => {
                 if (usageInput) {
                   return true;
@@ -63,7 +77,7 @@ const questions = ([
 
         {
             type: "input",
-            name: "contribution",
+            name: "contributing",
             message: "What guidelines must others follow in order to contribute",
             validate: contributionInput => {
                 if (contributionInput) {
@@ -77,10 +91,10 @@ const questions = ([
 
         {
             type: "input",
-            name: "test",
+            name: "tests",
             message: "How do you test this project?",
-            validate: testInput => {
-                if (testInput) {
+            validate: testsInput => {
+                if (testsInput) {
                   return true;
                 } else {
                   console.log('Please explain how to test this project');

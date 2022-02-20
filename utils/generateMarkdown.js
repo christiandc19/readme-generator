@@ -12,6 +12,8 @@ function renderLicenseBadge(license) {
     badge = "![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)"
   } else if (license === "GPL v3.0") {
     badge = "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+  } else if (license === "BSD 3") {
+    badge = "![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)"
   } else {
     badge = "";
   }
@@ -27,7 +29,9 @@ function renderLicenseLink(license) {
   } else if (license === "Apache 2.0") {
     licenseLink = "https://opensource.org/licenses/Apache-2.0"
   } else if (license === "GPL v3.0") {
-    licenseLink = "https://www.gnu.org/licenses/gpl-3.0"
+    licenseLink = "https://www.gnu.org/licenses/gpl-3.0" 
+  } else  if (license === "BSD 3") {
+    licenseLink = "https://opensource.org/licenses/BSD-3-Clause"
   } else {
     licenseLink = "";
   }
@@ -51,11 +55,12 @@ function renderLicenseSection(license) {
 function generateMarkdown(answer) {
   return `
   # ${answer.title}
+  ## ${answer.description}
 
   ## ${renderLicenseSection(answer.license)} ${renderLicenseBadge(answer.license)}\
   ### ${renderLicenseLink(answer.license)}
 
-  ##TABLE OF CONTENTS
+  ## TABLE OF CONTENTS
   ### * [License](#license)
   ### * [Installation](#intallation)
   ### * [Usage](#usage)
@@ -75,7 +80,7 @@ function generateMarkdown(answer) {
 
 
   ## TEST  
-  ### ${answer.test}
+  ### ${answer.tests}
 
   ## QUESTIONS  
   ### If you have any questions, you may contact me at:

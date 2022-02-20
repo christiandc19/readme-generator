@@ -1,13 +1,14 @@
 
   # Professional Readme Generator
 
-  ## license: MIT ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  ### https://opensource.org/licenses/MIT
+  ## license: MIT ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  
+  ## https://opensource.org/licenses/MIT
 
-  ##TABLE OF CONTENTS
+  ## TABLE OF CONTENTS
   ### * [License](#license)
   ### * [Installation](#intallation)
   ### * [Usage](#usage)
-  ### * [Contributions](#contributions)
+  ### * [Contributing](#contributing)
   ### * [Test](#test)
   ### * [Questions](#questions)
 
