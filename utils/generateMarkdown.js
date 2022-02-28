@@ -57,14 +57,14 @@ function generateMarkdown(answer) {
   # ${answer.title}
   ## ${answer.description}
 
-  ## ${renderLicenseSection(answer.license)} ${renderLicenseBadge(answer.license)}\
+  ## ${renderLicenseSection(answer.license)} ${renderLicenseBadge(answer.license)}
   ### ${renderLicenseLink(answer.license)}
 
   ## TABLE OF CONTENTS
   ### * [License](#license)
   ### * [Installation](#intallation)
   ### * [Usage](#usage)
-  ### * [Contributions](#contributions)
+  ### * [Contributing](#contributing)
   ### * [Test](#test)
   ### * [Questions](#questions)
 
@@ -76,7 +76,7 @@ function generateMarkdown(answer) {
   ### ${answer.usage}
 
   ## CONTRIBUTIONS  
-  ### ${answer.contribution}
+  ### ${answer.contributing}
 
 
   ## TEST  
