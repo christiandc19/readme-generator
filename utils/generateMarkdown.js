@@ -54,34 +54,35 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answer) {
   return `
+  ## ${renderLicenseBadge(answer.license)}
   # ${answer.title}
   ## ${answer.description}
 
-  ## ${renderLicenseSection(answer.license)} ${renderLicenseBadge(answer.license)}
-  ### ${renderLicenseLink(answer.license)}
-
+  ------------------
   ## TABLE OF CONTENTS
-  ### * [License](#license)
-  ### * [Installation](#intallation)
+  ### * [Installation](#installation)
   ### * [Usage](#usage)
   ### * [Contributing](#contributing)
+  ### * [License](#license)
   ### * [Test](#test)
   ### * [Questions](#questions)
-
+  ------------------
   ## INSTALLATION
   ### You must install the following for this app to function:
   ### ${answer.installation}
-
+  ------------------
   ## USAGE  
   ### ${answer.usage}
-
+  ------------------
   ## CONTRIBUTIONS  
   ### ${answer.contributing}
-
-
+  ------------------
+  ## LICENSE  
+  ### ${renderLicenseLink(answer.license)}
+  ------------------
   ## TEST  
   ### ${answer.tests}
-
+  ------------------
   ## QUESTIONS  
   ### If you have any questions, you may contact me at:
   ### Github: https://github.com/${answer.github} or,
